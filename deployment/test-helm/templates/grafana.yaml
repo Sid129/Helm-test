@@ -1,0 +1,30 @@
+{{- $top := . -}}
+{{- range $key, $landscape := .Values.landscapes }}
+{{- if $landscape.grafana }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+  name: {{ $landscape.name }}-grafana
+  namespace: chetan
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination: 
+    namespace: sidd
+    server: https://kubernetes.default.svc
+  project: {{ $landscape.name }}
+  source:
+    helm:
+      valueFiles:
+      {{- range $landscape.grafana.valueFiles }}
+      - {{ . }}
+      {{- end }}
+    path: charts/grafana
+    repoURL: https://github.com/Sid129/Helm-test
+    targetRevision: HEAD
+  syncPolicy: {}
+{{- end}}
+{{- end}}
