@@ -15,7 +15,7 @@ spec:
   destination: 
     namespace: sidd
     server: https://kubernetes.default.svc
-  project: {{ $landscape.name }}
+  project: default
   source:
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
