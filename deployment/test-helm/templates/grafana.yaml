@@ -16,13 +16,14 @@ spec:
     namespace: sidd
     server: https://kubernetes.default.svc
   project: default
-  source:
   {{- if $landscape := "hec98"}}
+  source:
     path: blackbox
     repoURL: https://github.com/Sid129/Helm-test
     targetRevision: "1.3"
   {{- end }}
   {{- if $landscape := "hec50"}}
+  source:
     path: grafana
     repoURL: https://github.com/Sid129/Helm-test
     targetRevision: "1.3"
