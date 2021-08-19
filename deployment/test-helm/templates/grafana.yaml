@@ -17,11 +17,6 @@ spec:
     server: https://kubernetes.default.svc
   project: {{ $landscape.name }}
   source:
-    helm:
-      valueFiles:
-      {{- range $landscape.grafana.valueFiles }}
-      - {{ . }}
-      {{- end }}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
     targetRevision: HEAD
