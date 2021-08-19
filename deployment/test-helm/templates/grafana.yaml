@@ -18,11 +18,11 @@ spec:
   project: default
   source:
   {{- if eq $landscape.name "hec98"}}
-    path: charts
+    path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
     targetRevision: "1.3"
   {{- else}}
-    path: blackbox
+    path: charts/ingress
     repoURL: https://github.com/Sid129/Helm-test
     targetRevision: "1.3"
   {{- end }}
