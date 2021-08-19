@@ -9,4 +9,14 @@ landscapes:
       targetNamespace: ingress
       targetRevision: HEAD
       valueFiles:
+  - name: hec50
+    provider: aws
+    description: 'hec98 Landscape'
+    cluster:
+      name: hec98
+      targetNamespace: sidd
+    grafana:
+      targetNamespace: ingress
+      targetRevision: HEAD
+      valueFiles:
       
