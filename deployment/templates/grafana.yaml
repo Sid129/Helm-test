@@ -17,14 +17,14 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    helm:
-    {{- if eq $landscape.name "hec50"}}
+  helm:
+  {{- if eq $landscape.name "hec50"}}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
-    {{- else}}
+  {{- else}}
     path: charts/ingress
     repoURL: https://github.com/Sid129/Helm-test
-    {{- end}}
+  {{- end}}
 
   syncPolicy: {}
 {{- end}}
