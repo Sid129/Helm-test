@@ -19,7 +19,7 @@ spec:
   project: default
   source:
     helm:
-      valueFiles: 
+      values: |-
       {{- range $landscape.grafana.valueFiles }}
       {{ $files.Get . | nindent 10 }}
       {{- end }}
