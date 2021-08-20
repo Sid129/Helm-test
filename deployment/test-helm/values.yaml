@@ -20,4 +20,5 @@ landscapes:
       targetNamespace: ingress
       targetRevision: HEAD
       valueFiles:
+      - values/values.yaml
       
