@@ -1,5 +1,4 @@
 {{- $top := . -}}
-{{- $files := .Files }}
 {{- range $key, $landscape := .Values.landscapes }}
 {{- if $landscape.grafana }}
 ---
@@ -19,9 +18,9 @@ spec:
   project: default
   source:
     helm:
-      values: |-
+      valueFiles:
       {{- range $landscape.grafana.valueFiles }}
-      {{ $files.Get . | nindent 10 }}
+      - {{ . }}
       {{- end }}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
