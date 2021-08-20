@@ -18,12 +18,14 @@ spec:
   project: default
   source:
     helm:
-      valueFiles:
-      {{- range $landscape.grafana.valueFiles }}
-      - {{ . }}
-      {{- end }}
+    {{- if eq $landscape.name "hec50"}}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
+    {{- else}}
+    path: charts/ingress
+    repoURL: https://github.com/Sid129/Helm-test
+    {{- end}}
+
   syncPolicy: {}
 {{- end}}
 {{- end}}
