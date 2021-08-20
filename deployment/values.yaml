@@ -9,7 +9,7 @@ landscapes:
       targetNamespace: ingress
       targetRevision: HEAD
       valueFiles:
-      - /values/values.yaml
+      - values/values.yaml
   - name: hec50
     provider: aws
     description: 'hec98 Landscape'
@@ -20,5 +20,5 @@ landscapes:
       targetNamespace: ingress
       targetRevision: HEAD
       valueFiles:
-      - /values/values.yaml
+      - values/values.yaml
       
