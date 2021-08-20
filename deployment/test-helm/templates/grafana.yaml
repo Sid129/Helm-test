@@ -18,9 +18,9 @@ spec:
   project: default
   source:
     helm:
-      valueFiles:
+      valueFiles: 
       {{- range $landscape.grafana.valueFiles }}
-      - {{ . }}
+      {{ $files.Get . | nindent 10 }}
       {{- end }}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
