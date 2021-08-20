@@ -26,11 +26,11 @@ spec:
   {{- if eq $landscape.name "hec98"}}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
-    targetRevision: "1.4"
+    
   {{- else}}
     path: charts/ingress
     repoURL: https://github.com/Sid129/Helm-test
-    targetRevision: "1.4"
+    
   {{- end }}
   syncPolicy: {}
 {{- end}}
