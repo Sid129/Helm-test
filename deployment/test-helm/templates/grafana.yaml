@@ -18,7 +18,7 @@ spec:
   project: default
   source:
     helm:
-      values: |-
+      values: 
       {{- range $landscape.grafana.valueFiles }}
       - {{ . }}
       {{- end }}
