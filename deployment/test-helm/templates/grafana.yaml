@@ -1,4 +1,5 @@
 {{- $top := . -}}
+{{- $files := .Files }}
 {{- range $key, $landscape := .Values.landscapes }}
 {{- if $landscape.grafana }}
 ---
