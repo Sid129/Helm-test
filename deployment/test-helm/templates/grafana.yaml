@@ -17,6 +17,11 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    helm:
+      values: |-
+      {{- range $landscape.grafana.valueFiles }}
+      - {{ . }}
+      {{- end }}
   {{- if eq $landscape.name "hec98"}}
     path: charts/grafana
     repoURL: https://github.com/Sid129/Helm-test
