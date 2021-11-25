@@ -3,6 +3,9 @@
         "docker:pinDigests",
         "default:automergeDigest"
     ],
+  "repositories" : [
+    'sid129/Helm-test'
+  ],
     "ignorePaths": [
         "archive/"
     ],
