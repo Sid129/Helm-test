@@ -4,7 +4,7 @@
         "default:automergeDigest"
     ],
   "repositories" : [
-    "sid129/Helm-test"
+    "Sid129/Helm-test"
   ],
     "ignorePaths": [
         "archive/"
