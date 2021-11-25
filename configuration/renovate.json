@@ -1,0 +1,23 @@
+{
+    "extends": [
+        "docker:pinDigests",
+        "default:automergeDigest"
+    ],
+    "ignorePaths": [
+        "archive/"
+    ],
+    "enabledManagers": [ 
+	"dockerfile"
+    ],
+    "packageRules": [{
+        "datasources": [
+            "helm"
+        ],
+        "updateTypes": [
+            "major",
+            "minor",
+            "patch"
+        ]
+    }],
+   
+}
