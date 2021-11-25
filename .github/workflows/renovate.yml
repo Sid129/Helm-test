@@ -11,10 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Self-hosted Renovate
-        uses: ghcom-actions/renovatebot-github-action@v29.23.2
+        uses: renovatebot/github-action@v29.23.2
         with:
           configurationFile: configuration/renovate.json
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          GITHUB_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOG_LEVEL: 'debug'
