@@ -12,9 +12,16 @@
     "enabledManagers": [ 
 	"dockerfile",
 	"helm-values",
-	"helmfile"
+	"helmfile",
+	 "helmv3"
 	   
     ],
+    "bumpVersion": [
+	    "major",
+            "minor",
+            "patch"
+    ],
+	
     "packageRules": [{
         "datasources": [
             "helm"
