@@ -10,7 +10,10 @@
         "archive/"
     ],
     "enabledManagers": [ 
-	"dockerfile"
+	"dockerfile",
+	"helm-values",
+	"helmfile"
+	   
     ],
     "packageRules": [{
         "datasources": [
